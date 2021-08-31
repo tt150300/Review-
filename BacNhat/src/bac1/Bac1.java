@@ -3,39 +3,39 @@ package bac1;
 
 
 public class Bac1{
-    protected float hs0, hs1;
+    private float numberA, numberB;
     public Bac1(){
-        hs0 = hs1 = 0;
+        numberA = numberB = 0;
     }
     public Bac1(float a, float b){
-        hs1 = a; hs0 = b;
+        numberB = a; numberA = b;
     }
 
     public float getHs0() {
-        return hs0;
+        return numberA;
     }
 
     public float getHs1() {
-        return hs1;
+        return numberB;
     }
 
     public void setHs0(float hs0) {
-        this.hs0 = hs0;
+        this.numberA = hs0;
     }
 
     public void setHs1(float hs1) {
-        this.hs1 = hs1;
+        this.numberB = hs1;
     }
 
    
     public String toString() {
-        return hs1 + "x" + ((hs0>=0)?" + ":"") + hs0 + " = 0";  
+        return numberB + "x" + ((numberA>=0)?" + ":"") + numberA + " = 0";  
     }
     public String giai(){
-        if(hs1==0)
-            if(hs0==0) return "vô số nghiệm.";
+        if(numberB==0)
+            if(numberA==0) return "vô số nghiệm.";
             else return "vô nghiệm.";
-        else return "\n x = " + -hs0/hs1;
+        else return "\n x = " + -numberA/numberB;
     }
     
     
