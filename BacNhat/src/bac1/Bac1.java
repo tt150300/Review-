@@ -3,7 +3,7 @@ package bac1;
 
 
 public class Bac1{
-    private float numberA, numberB;
+    protected float numberA, numberB;
     public Bac1(){
         numberA = numberB = 0;
     }

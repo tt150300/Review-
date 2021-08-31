@@ -24,7 +24,7 @@ public class Bac2 extends Bac1 {
     
     public String toString() {
         String s;
-        s = numberC + "x^2" + ((hs1>=0)?"+":"" + super.toString());
+        s = numberC + "x^2" + ((numberA>=0)?"+":"" + super.toString());
         return s;
     }
     
@@ -32,12 +32,12 @@ public class Bac2 extends Bac1 {
         String s ="";
         if(numberC==0) s = super.giai();
         else{
-            float d = hs1*hs1-4*numberC*hs0;
+            float d = numberA*numberB-4*numberC*numberA;
             if(d<0) s = "Vô nghiệm";
-            if(d==0) s ="x1 = x2 = " + hs1/2/numberC;
+            if(d==0) s ="x1 = x2 = " + numberA/2/numberC;
             if(d>0){
-                float x1 = (hs1-(float)Math.sqrt(d))/2/numberC;
-                float x2 = (hs1+(float)Math.sqrt(d))/2/numberC;
+                float x1 = (numberB-(float)Math.sqrt(d))/2/numberC;
+                float x2 = (numberB+(float)Math.sqrt(d))/2/numberC;
                 s = "\nx1 = " + x1 + "\nx2 = " + x2;
             }
         }
